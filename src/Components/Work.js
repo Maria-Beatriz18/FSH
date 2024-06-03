@@ -1,24 +1,16 @@
 import React from "react";
 import ChooseMeals from "../Assets/choose-image.png";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Logo from "../Assets/Logo.png";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Carousel } from 'react-bootstrap';
+
+
+
 
 const Work = () => {
-  const workInfoData = [
-    {
-      image: ChooseMeals,
-      title: "Vestibular",
-      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et sagittis duis elementum interdum facilisi bibendum.",
-    },
-    {
-      image: ChooseMeals,
-      title: "Enem",
-      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et ",
-    },
-    {
-      image: ChooseMeals,
-      title: "Trasferência ",
-      text: "Lorem ipsum dolor sit amet consectetur. Maecenas orci et lorem ipsum",
-    },
-  ];
+  
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
@@ -29,15 +21,38 @@ const Work = () => {
         </p>
       </div>
       <div className="work-section-bottom">
-        {workInfoData.map((data) => (
-          <div className="work-section-info" key={data.title}>
-            <div className="info-boxes-img-container">
-              <img src={data.image} alt="" />
+      <div className="card" style={{ width: "30%" }}>
+              <img src={Logo} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1"  className="btn btn-primary">Matricule-se</a>
+              </div>
             </div>
-            <h2>{data.title}</h2>
-            <p>{data.text}</p>
-          </div>
-        ))}
+            <div className="card" style={{ width: "30%" }}>
+              <img src={Logo} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1"  className="btn btn-primary">Matricule-se</a>
+              </div>
+            </div>
+            <div className="card" style={{ width: "30%" }}>
+              <img src={Logo} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1"  className="btn btn-primary">Matricule-se</a>
+              </div>
+            </div>
+            <div className="card" style={{ width: "30%" }}>
+              <img src={Logo} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">Card title</h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1"  className="btn btn-primary">Matricule-se</a>
+              </div>
+            </div>
       </div>
     </div>
   );
