@@ -117,6 +117,7 @@ const Navbar = () => {
             <FaWhatsapp className="navbar-cart-icon" />{" "}
           </button>{" "}
         </a>
+        
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
