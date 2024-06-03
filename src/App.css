@@ -85,6 +85,31 @@ nav {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
 
+.dropdown{
+ margin-right: 20px;
+}
+
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #044559;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+
 .fsh{
   position: absolute;
   margin-top: -60px;
@@ -290,7 +315,22 @@ nav {
 }
 .work-section-wrapper {
   margin-top: 15rem;
+  
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* permite que os elementos quebrem para a próxima linha */
+  justify-content: space-between; /* distribui os elementos igualmente na linha */
+}
+
+.card {
+  width: calc(33.33% - 20px); /* Define a largura do card, menos a margem entre eles */
+  margin-bottom: 20px; /* Adiciona espaço entre os cards */
+}
+
+
+
 .work-section-top p {
   text-align: center;
   max-width: 600px !important;
