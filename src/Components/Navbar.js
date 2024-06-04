@@ -45,10 +45,10 @@ const Navbar = () => {
           <a href="#">Cursos</a>
           {openDropdown.cursos && (
             <div className="dropdown-content">
-              <Link to="/tec">tecnólogo</Link>
-              <Link to="/pos">Pós Graduação</Link>
-              <Link to="/graduacao">Graduação</Link>
-              
+              <Link to="/tec">tecnólogos</Link>
+              <Link to="/sobre">Pós Graduação</Link>
+              <Link to="/sobre">Graduação</Link>
+
             </div>
           )}
         </div>

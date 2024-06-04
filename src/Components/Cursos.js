@@ -11,7 +11,6 @@ import mkt from '../Assets/marketing.jpg';
 import gc from '../Assets/gestao.jpg';
 
 
-
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
@@ -32,7 +31,6 @@ const responsive = {
 };
 
 const Cursos = () => {
-  // Array com os dados de cada curso (imagem e texto)
   const cursos = [
     {
       imgSrc: ciencias,
@@ -66,8 +64,6 @@ const Cursos = () => {
       imgSrc: gc,
       title: "Gestão Comercial (Tecnólogo)",
     },
-   
-    // Adicione mais cursos aqui conforme necessário
   ];
 
   return (
@@ -79,12 +75,12 @@ const Cursos = () => {
 
       <Carousel responsive={responsive}>
         {cursos.map((curso, index) => (
-          <div className="card" style={{ width: "90%", margin: "0 auto", maxHeight: "300px" }} key={index}>
-            <img src={curso.imgSrc} className="card-img-top" alt={curso.title} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "cover" }} />
+          <div className="card" style={{ width: "100%", margin: "0 auto", maxHeight: "300px" }} key={index}>
+            <img src={curso.imgSrc} className="card-img-top curso-img" alt={curso.title} />
             <div className="card-body">
               <h5 className="card-title">{curso.title}</h5>
               <p className="card-text">{curso.text}</p>
-              <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1" className="btn btn-primary">Matricule-se</a>
+              <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1" className="btn btn-primary custom-primary-btn">Matricule-se</a>
             </div>
           </div>
         ))}

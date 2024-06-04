@@ -2,6 +2,8 @@ import React from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Curso from "../../Components/Lista_cursos"; // Importe o componente Curso
+import Work from "../../Components/Work";
+
 
 const cursos = [
   {
@@ -37,6 +39,7 @@ function Tec() {
           ))}
         </div>
       </section>
+      <Work/>
       <Footer />
     </div>
   );

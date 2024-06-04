@@ -11,6 +11,15 @@ img {
   height: auto;
 }
 
+.curso-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  width: 100%; /* Defina o tamanho desejado */
+  height: 200px; /* Defina o tamanho desejado */
+}
+
+
 
 .App {
   min-height: 100vh;
@@ -254,7 +263,7 @@ body {
   background-color: #50a5bc;
 }
 .about-section-container {
-  margin-top: 20rem;
+  margin-top: 5rem;
   position: relative;
   display: flex;
   align-items: center;
@@ -270,10 +279,11 @@ body {
   margin-right: 1rem;
 }
 .about-section-text-container {
-  flex: 1;
+  flex: 0.8;
   justify-content: center;
   display: flex;
   flex-direction: column;
+  padding-left: 5rem;
 }
 .primary-subheading {
   font-weight: 700;
@@ -366,7 +376,7 @@ body {
   min-width: 190px;
 }
 .footer-section-columns span {
-  margin: 0.30rem 0rem;
+  margin: 0.50rem 0rem;
   font-weight: 600;
   color:#044559;
   cursor: pointer;
@@ -530,6 +540,7 @@ body {
   }
   .about-section-container {
     margin-top: 5rem !important;
+    
   }
   .about-buttons-container {
     justify-content: center;

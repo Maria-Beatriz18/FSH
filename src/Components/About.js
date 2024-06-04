@@ -13,7 +13,7 @@ const About = () => {
       </div>
 
       <div className="about-section-image-container">
-      <video controls  width="400" height="520" className="video">
+      <video controls   width="100%" height="520" className="video">
           <source src={Video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

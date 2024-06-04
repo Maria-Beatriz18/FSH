@@ -4,6 +4,8 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { SiLinkedin } from "react-icons/si";
 import { BsYoutube } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -29,23 +31,49 @@ const Footer = () => {
       </div>
       <div className="footer-section-two">
         <div className="footer-section-columns">
-          <span>Sobre a FSH</span>
-          <span>Cursos</span>
-          <span>Formas de Ingresso</span>
-          <span>Portais</span>
-          <span>Documentos/Editais</span>
-          <span>Ouvidoria</span>
-          <span>Fale Conosco</span>
-          <span>Trabalhe Conosco</span>
+        <Link to="/sobre" style={{ textDecoration: 'none', color: 'inherit' }}><span>Sobre a FSH</span></Link>
+
+          
+          
+          <a href="mailto:ouvidoria@fsh.edu.br" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Ouvidoria</span>
+          </a>
+
+
+
+          <a href="https://wa.link/4m0z6k" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Fale Conosco</span>
+          </a>
+        
+
+          <a href="mailto:rh@fsh.edu.br" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Trabalhe Conosco</span>
+          </a>
+
+
         </div>
         <div className="footer-section-columns">
+
+
+        
+          
+
+          <a href="https://wa.link/4m0z6k" style={{ textDecoration: 'none', color: 'inherit' }}>
           <span> +55 81 99744-4270</span>
-          <span>atendimento.geral@fsh.edu.br</span>
+          </a>
+
+          <a href="mailto:atendimento.geral@fsh.edu.br" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Atendimento Geral</span>
+          </a>
           
         </div>
         <div className="footer-section-columns">
-          <span>Terms & Conditions</span>
-          <span>Privacy Policy</span>
+          <a href="/terms-and-conditions" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Terms & Conditions</span>
+          </a>
+          <a href="/privacy-policy" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <span>Privacy Policy</span>
+          </a>
         </div>
       </div>
     </div>
