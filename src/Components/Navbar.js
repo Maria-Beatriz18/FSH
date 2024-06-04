@@ -46,8 +46,8 @@ const Navbar = () => {
           {openDropdown.cursos && (
             <div className="dropdown-content">
               <Link to="/tec">tecnólogos</Link>
-              <Link to="/sobre">Pós Graduação</Link>
-              <Link to="/sobre">Graduação</Link>
+              <Link to="/pos">Pós Graduação</Link>
+              <Link to="/graduacao">Graduação</Link>
 
             </div>
           )}
