@@ -639,8 +639,11 @@ body {
 }
 
 .image-curso img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ocupa toda a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  max-width: 300px; /* Define uma largura máxima */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para a imagem */
 }
 
 .texto-curso {
@@ -665,6 +668,13 @@ body {
   border: none;
   cursor: pointer;
   width: 100%; /* Faz o botão ocupar toda a largura do container */
+  text-align: center; /* Centraliza o texto do botão */
+  border-radius: 8px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.btn-curso:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 .curso .titulo-botao {
@@ -676,4 +686,95 @@ body {
 .curso .titulo-botao p {
   margin-bottom: 10px;
 }
+/* Estilos para o título dos cursos */
+.titulo-cursos {
+  font-size: 2rem; /* Ajuste o tamanho da fonte */
+  color: #044559; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-bottom: 100px;
+}
 
+.curso {
+  display: flex;
+  flex-direction: row; /* Alinha os itens em linha */
+  align-items: flex-start; /* Alinha os itens ao início verticalmente */
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  height: 300px; /* Aumenta a altura do bloco */
+}
+
+.curso:hover {
+  transform: scale(1.05); /* Efeito de "saltinho" */
+}
+
+.image-curso {
+  flex: 0 0 350px; /* Define uma largura maior para a imagem */
+  margin-right: 20px;
+}
+
+.image-curso img {
+  width: 100%; /* Ocupa toda a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para a imagem */
+}
+
+.texto-curso {
+  flex: 1; /* O texto ocupa o restante do espaço */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espaça o botão na parte inferior */
+  overflow-y: auto; /* Adiciona scroll para textos longos */
+  max-height: 250px; /* Limita a altura máxima da área de texto */
+}
+
+.texto-curso h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.texto-curso p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Adiciona um espaço abaixo do texto */
+}
+
+.btn-curso {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  text-align: center; /* Centraliza o texto do botão */
+  border-radius: 8px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave para a mudança de cor */
+  align-self: flex-end; /* Alinha o botão ao final do container */
+  width: auto; /* Ajusta a largura do botão */
+  max-width: 200px; /* Define uma largura máxima para o botão */
+}
+
+.btn-curso:hover {
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .curso {
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Ajusta a altura para auto em telas menores */
+  }
+
+  .image-curso, .texto-curso {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
