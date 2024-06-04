@@ -1,30 +1,40 @@
+import React from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import "./tec.module.css"
+import Curso from "../../Components/Lista_cursos"; // Importe o componente Curso
 
 
-function Tec (){
+const cursos = [
+  {
+    imagem: "https://universidadeniltonlins.com.br/wp-content/uploads/2019/07/cba_financas_e_controladoria_sug2_0.jpg",
+    titulo: "Ciências Contábeis",
+    texto: "Aprenda a criar interfaces web interativas com React.",
+    link: "https://www.linkdocurso.com.br",
+  },
+  {
+    imagem: "https://www.imagemnl.com/",
+    titulo: "Curso de JavaScript",
+    texto: "Domine a linguagem base da web e crie scripts poderosos.",
+    link: "https://www.linkdocurso.com.br",
+  },
+  // Adicione mais cursos aqui
+];
 
-    return(
-     <div className="App">
-      <Navbar/>
-      <section>
-        <div className="container-tec"> {/* Container principal */}
-          <div className="image-curso">
-            <img src="https://www.imagemnl.com/" alt="Imagem do curso" /> {/* Insira a URL da imagem */}
-          </div>
-          <div className="texto-curso">
-            <h2>Título do Curso</h2> {/* Altere para o título real do curso */}
-            <p>
-              Breve descrição do curso, detalhando os principais pontos abordados.
-            </p>
-          </div>
-          <button className="btn-curso">Saiba Mais</button> {/* Altere o texto do botão */}
+function Tec() {
+  return (
+    <div className="App">
+      <Navbar />
+      <section className="cursos-container">
+      <h2 className="titulo-cursos">Nossos Cursos</h2>
+        <div className="lista-cursos">
+          {cursos.map((curso) => (
+            <Curso key={curso.titulo} {...curso} /> 
+          ))}
         </div>
       </section>
       <Footer />
     </div>
-    )
+  );
 }
 
 export default Tec;

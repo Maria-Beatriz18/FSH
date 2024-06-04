@@ -593,4 +593,84 @@ body {
    
 }
 
+.container-tec {
+  display: flex;
+  flex-direction: column; /* Alinha os cursos em coluna */
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.lista-cursos {
+  display: flex;
+  flex-direction: column; /* Alinha os cursos em coluna */
+  align-items: center; /* Centraliza os cursos horizontalmente */
+  margin: 20px auto;
+}
+
+.curso {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+.cursos-container {
+  margin-top: 50px;
+}
+
+/* Estilos para o título dos cursos */
+.titulo-cursos {
+  font-size: 2rem; /* Ajuste o tamanho da fonte */
+  color: #044559; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-bottom: 100px;
+}
+
+.image-curso {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.image-curso img {
+  width: 100%;
+  height: auto;
+}
+
+.texto-curso {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.texto-curso h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.texto-curso p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.btn-curso {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Faz o botão ocupar toda a largura do container */
+}
+
+.curso .titulo-botao {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.curso .titulo-botao p {
+  margin-bottom: 10px;
+}
 
