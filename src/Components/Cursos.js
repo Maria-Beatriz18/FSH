@@ -5,10 +5,11 @@ import { Carousel } from 'react-bootstrap';
 
 const Cursos = () => {
   return (
+    
     <div className="work-section-wrapper">
       <div className="work-section-top">
         <h1  className="primary-heading">Cursos</h1>
-        <p className="primary-text">Matricule-se</p>
+        {/* <p className="primary-text">Matricule-se</p> */}
       </div>
 
       <Carousel interval={null} controls={true} indicators={false}>

@@ -10,9 +10,9 @@ function Inicio (){
     return(
      <div className="App">
       <Home />
-      <About />
-      <Work />
+      {/* <About /> */}
       <Cursos/>
+      <Work />
       <Footer />
     </div>
     )
