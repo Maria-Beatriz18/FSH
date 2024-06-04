@@ -582,6 +582,9 @@ body {
   .App {
     max-width: 95vw;
   }
+
+
+  
 }
 @media (max-width: 600px) {
   .home-bannerImage-container,
