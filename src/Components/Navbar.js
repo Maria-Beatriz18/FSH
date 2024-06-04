@@ -41,7 +41,17 @@ const Navbar = () => {
       <div className="navbar-links-container">
       <Link to="/">Inicio</Link>
         <Link to="/sobre">Sobre</Link>
-        <a href="">Cursos</a>
+        <div className="dropdown" onMouseEnter={() => handleDropdownToggle('cursos')} onMouseLeave={() => handleDropdownToggle('cursos')}>
+          <a href="#">Cursos</a>
+          {openDropdown.cursos && (
+            <div className="dropdown-content">
+              <Link to="/tec">tecnólogo</Link>
+              <Link to="/pos">Pós Graduação</Link>
+              <Link to="/graduacao">Graduação</Link>
+              
+            </div>
+          )}
+        </div>
         <a href="#formas-de-ingresso">Formas de Ingresso</a>
 
         <div

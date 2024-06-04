@@ -1,7 +1,16 @@
 import React from "react";
-import Logo from "../Assets/Logo.png";
 import 'react-multi-carousel/lib/styles.css';
 import Carousel from 'react-multi-carousel';
+import ciencias from '../Assets/ciencias contabeis.jpg'; 
+import adm from '../Assets/adm.jpg';
+import direito from '../Assets/direito.jpg';
+import sv from '../Assets/servico social.jpg';
+import rh from '../Assets/rh.jpg';
+import logistica from '../Assets/logistica.jpg';
+import mkt from '../Assets/marketing.jpg';
+import gc from '../Assets/gestao.jpg';
+
+
 
 const responsive = {
   superLargeDesktop: {
@@ -23,22 +32,58 @@ const responsive = {
 };
 
 const Cursos = () => {
+  // Array com os dados de cada curso (imagem e texto)
+  const cursos = [
+    {
+      imgSrc: ciencias,
+      title: "Ciências Contábeis (Bacharelado)",
+    },
+    {
+      imgSrc: adm,
+      title: "Administração (Bacharelado)",
+    },
+    {
+      imgSrc: direito,
+      title: "Direito (Bacharelado)",
+    },
+    {
+      imgSrc: sv,
+      title: "Serviço Social (Bacharelado)",
+    },
+    {
+      imgSrc: rh,
+      title: "Recursos Humanos (Tecnólogo)",
+    },
+    {
+      imgSrc: logistica,
+      title: "Logistica  (Tecnólogo)",
+    },
+    {
+      imgSrc: mkt,
+      title: "Marketing (Tecnólogo)",
+    },
+    {
+      imgSrc: gc,
+      title: "Gestão Comercial (Tecnólogo)",
+    },
+   
+    // Adicione mais cursos aqui conforme necessário
+  ];
+
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
         <h1 className="primary-heading">Cursos</h1>
         <p className="primary-text">Descubra o Caminho para o Seu Sucesso</p>
-
-       
       </div>
 
       <Carousel responsive={responsive}>
-        {[...Array(8)].map((_, index) => (
-          <div className="card" style={{ width: "90%", margin: "0 auto" }} key={index}>
-            <img src={Logo} className="card-img-top" alt="..." />
+        {cursos.map((curso, index) => (
+          <div className="card" style={{ width: "90%", margin: "0 auto", maxHeight: "300px" }} key={index}>
+            <img src={curso.imgSrc} className="card-img-top" alt={curso.title} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "cover" }} />
             <div className="card-body">
-              <h5 className="card-title">Card title {index + 1}</h5>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h5 className="card-title">{curso.title}</h5>
+              <p className="card-text">{curso.text}</p>
               <a href="https://docs.google.com/forms/d/19O1u_xepeaB7oBg-TkhX_3nV4iv8R4olLGgpXL_9Db8/edit?pli=1" className="btn btn-primary">Matricule-se</a>
             </div>
           </div>
