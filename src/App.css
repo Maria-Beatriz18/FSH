@@ -362,7 +362,7 @@ body {
   min-width: 190px;
 }
 .footer-section-columns span {
-  margin: 0.20rem 0rem;
+  margin: 0.30rem 0rem;
   font-weight: 600;
   color:#044559;
   cursor: pointer;
@@ -573,7 +573,7 @@ body {
     margin-top: 2rem;
   }
   .footer-section-columns {
-    margin: 1rem 0rem;
+    margin: 2rem 0rem;
   }
   .App {
     max-width: 95vw;

@@ -14,7 +14,7 @@ const Home = () => {
       <Navbar />
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
-        <Carousel fade>
+        {/* <Carousel fade>
             <CarouselItem interval={2000} className="carousel-item active">
               <img src={BannerImage} className="d-block w-100" alt="Banner Image" />
             </CarouselItem>
@@ -22,7 +22,7 @@ const Home = () => {
             <CarouselItem interval={2000} className="carousel-item">
               <img src={BannerImage} className="d-block w-100" alt="Banner Image" />
             </CarouselItem>
-          </Carousel>
+          </Carousel> */}
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
@@ -36,8 +36,15 @@ const Home = () => {
           </button> </a>
         </div>
         <div className="home-image-section">
-
-          {/*<img src={BannerImage} alt="" /> */}
+<Carousel fade>
+            <CarouselItem interval={2000} className="carousel-item active">
+              <img src={BannerImage} className="d-block w-100" alt="Banner Image" />
+            </CarouselItem>
+          
+            <CarouselItem interval={2000} className="carousel-item">
+              <img src={BannerImage} className="d-block w-100" alt="Banner Image" />
+            </CarouselItem>
+          </Carousel>
         </div>
       </div>
 

@@ -103,7 +103,7 @@ const Navbar = () => {
           onKeyDown={() => setOpenMenu(false)}
         >
           <List>
-            {[{ text: "Home", icon: <HomeIcon /> }, { text: "Sobre", icon: <InfoIcon /> }, { text: "Testimonials", icon: <CommentRoundedIcon /> }, { text: "Contact", icon: <PhoneRoundedIcon /> }, { text: "Cart", icon: <ShoppingCartRoundedIcon /> }].map((item) => (
+            {[{ text: "Sobre", icon: <HomeIcon /> }, { text: "Cursos", icon: <InfoIcon /> }, { text: "Formas de Ingresso", icon: <CommentRoundedIcon /> }, { text: "Portais", icon: <PhoneRoundedIcon /> }, { text: "Documentos/Editais", icon: <ShoppingCartRoundedIcon /> }].map((item) => (
               <ListItem key={item.text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>{item.icon}</ListItemIcon>

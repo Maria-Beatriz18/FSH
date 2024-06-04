@@ -7,7 +7,7 @@ const Cursos = () => {
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
-        <h1 className="primary-heading">Cursos</h1>
+        <h1  className="primary-heading">Cursos</h1>
         <p className="primary-text">Matricule-se</p>
       </div>
 
