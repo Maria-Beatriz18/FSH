@@ -18,6 +18,8 @@ img {
   max-width: 1900px;
   margin: 0rem auto;
 }
+
+
 body {
   max-width: 100%;
   overflow-x: hidden;
@@ -449,7 +451,7 @@ body {
   margin: 1rem 0rem;
 }
 .work-section-bottom {
-  margin-top: 5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
