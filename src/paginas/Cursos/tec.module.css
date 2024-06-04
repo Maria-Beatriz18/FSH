@@ -1,0 +1,39 @@
+.container-tec {
+    display: flex; /* Organiza os elementos em linha */
+    align-items: center; /* Alinha verticalmente */
+    margin: 20px auto; /* Adiciona margem superior e centraliza na tela */
+    max-width: 800px; /* Define a largura máxima da seção */
+  }
+  
+  .image-curso {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    margin-right: 20px; /* Adiciona margem à direita da imagem */
+  }
+  
+  .image-curso img {
+    width: 100%; /* Ajusta a largura da imagem à largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+  
+  .texto-curso {
+    flex: 1; /* Ocupa metade do espaço disponível */
+  }
+  
+  .texto-curso h2 {
+    font-size: 24px; /* Tamanho da fonte do título */
+    margin-bottom: 10px; /* Adiciona margem inferior ao título */
+  }
+  
+  .texto-curso p {
+    font-size: 16px; /* Tamanho da fonte da descrição */
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+  }
+  
+  .btn-curso {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão do botão */
+    cursor: pointer; /* Exibe o cursor de mão ao passar o mouse sobre o botão */
+  }
+  
