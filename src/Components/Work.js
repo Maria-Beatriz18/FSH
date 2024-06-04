@@ -13,7 +13,7 @@ const Work = () => {
     
     <div className="work-section-wrapper">
       <div className="work-section-top">
-        <h1 id="fi" className="primary-heading">Formas de Ingresso</h1>
+        <h1 id="formas-de-ingresso" className="primary-heading">Formas de Ingresso</h1>
         <p className="primary-text">
           O melhor caminho é aquele que funciona para você.
         </p>

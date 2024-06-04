@@ -42,7 +42,7 @@ const Navbar = () => {
       <Link to="/">Inicio</Link>
         <Link to="/sobre">Sobre</Link>
         <a href="">Cursos</a>
-        <a href="">Formas de Ingresso</a>
+        <a href="#formas-de-ingresso">Formas de Ingresso</a>
 
         <div
           className="dropdown"
