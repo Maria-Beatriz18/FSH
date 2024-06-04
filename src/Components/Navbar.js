@@ -16,36 +16,27 @@ import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { FaWhatsapp } from "react-icons/fa";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const [openDropdownPortais, setOpenDropdownPortais] = useState(false);
-  const [openDropdownDocumentos, setOpenDropdownDocumentos] = useState(false);
-  const [openDropdownCursos, setOpenDropdownCursos] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState({
+    portais: false,
+    documentos: false,
+    cursos: false,
+  });
 
-
-  const handleDropdownPortaisToggle = () => {
-    setOpenDropdownPortais(!openDropdownPortais);
-    setOpenDropdownDocumentos(false); // Fecha o dropdown de documentos se estiver aberto
-  };
-
-  const handleDropdownDocumentosToggle = () => {
-    setOpenDropdownDocumentos(!openDropdownDocumentos);
-    setOpenDropdownPortais(false); // Fecha o dropdown de portais se estiver aberto
-  };
-
-  const handleDropdownCursosToggle = () => {
-    setOpenDropdownCursos(!openDropdownCursos);
-    setOpenDropdownPortais(false) && setOpenDropdownDocumentos(false);// Fecha o dropdown de portais se estiver aberto
+  const handleDropdownToggle = (dropdown) => {
+    setOpenDropdown((prev) => ({
+      ...prev,
+      [dropdown]: !prev[dropdown],
+    }));
   };
 
   return (
     <nav>
       <div className="nav-logo-container">
-
-    <Link to="/"> <img src={Logo} alt="" className="fsh" /> </Link>
-
+        <Link to="/"> <img src={Logo} alt="Logo" className="fsh" /> </Link>
       </div>
       <div className="navbar-links-container">
         <Link to="/sobre">Sobre</Link>
@@ -54,11 +45,11 @@ const Navbar = () => {
 
         <div
           className="dropdown"
-          onMouseEnter={handleDropdownPortaisToggle}
-          onMouseLeave={handleDropdownPortaisToggle}
+          onMouseEnter={() => handleDropdownToggle('portais')}
+          onMouseLeave={() => handleDropdownToggle('portais')}
         >
           <a href="#">Portais</a>
-          {openDropdownPortais && (
+          {openDropdown.portais && (
             <div className="dropdown-content">
               <a href="https://fsh.jacad.com.br/academico/aluno-v2/login">
                 Portal do Aluno
@@ -75,38 +66,17 @@ const Navbar = () => {
 
         <div
           className="dropdown"
-          onMouseEnter={handleDropdownDocumentosToggle}
-          onMouseLeave={handleDropdownDocumentosToggle}
+          onMouseEnter={() => handleDropdownToggle('documentos')}
+          onMouseLeave={() => handleDropdownToggle('documentos')}
         >
           <a href="#">Documentos/Editais</a>
-          {openDropdownDocumentos && (
+          {openDropdown.documentos && (
             <div className="dropdown-content">
-
-              <a href="#" onClick={() => window.open('/Documentos/00-FSH-Regulamento Colegiado de Curso.pdf')}>
-                Regulamento Colegiado de Curso
-              </a>
-
-              <a href="#" onClick={() => window.open('/Documentos/000-Regulamento da CPA.pdf')}>
-                Regulamento da CPA
-              </a>
-
-              <a href="#" onClick={() => window.open('/Documentos/00-Regulamento NDE.pdf')}>
-                Regulamento NDE
-              </a>
-
-              <a href="#" onClick={() => window.open('/Documentos/01-FSH-Regimento Geral.pdf')}>
-                Regimento Geral
-              </a>
-
-              <a href="#" onClick={() => window.open('/Documentos/02-FSH-PDI-2024-2028.pdf')}>
-                PDI
-              </a>
-
-              <a href="#" onClick={() => window.open('/Documentos/Apresentação CPA 2023_2s.pdf')}>
-                Apresentação CPA
-              </a>
-
-
+              {['/Documentos/00-FSH-Regulamento Colegiado de Curso.pdf', '/Documentos/000-Regulamento da CPA.pdf', '/Documentos/00-Regulamento NDE.pdf', '/Documentos/01-FSH-Regimento Geral.pdf', '/Documentos/02-FSH-PDI-2024-2028.pdf', '/Documentos/Apresentação CPA 2023_2s.pdf'].map((doc, index) => (
+                <a key={index} href="#" onClick={() => window.open(doc)}>
+                  {doc.split('/').pop().replace('.pdf', '').replace(/[-_]/g, ' ')}
+                </a>
+              ))}
             </div>
           )}
         </div>
@@ -117,7 +87,6 @@ const Navbar = () => {
             <FaWhatsapp className="navbar-cart-icon" />{" "}
           </button>{" "}
         </a>
-        
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
@@ -134,7 +103,7 @@ const Navbar = () => {
           onKeyDown={() => setOpenMenu(false)}
         >
           <List>
-            {[{ text: "Home", icon: <HomeIcon /> }, { text: "sobre", icon: <InfoIcon /> }, { text: "Testimonials", icon: <CommentRoundedIcon /> }, { text: "Contact", icon: <PhoneRoundedIcon /> }, { text: "Cart", icon: <ShoppingCartRoundedIcon /> }].map((item) => (
+            {[{ text: "Home", icon: <HomeIcon /> }, { text: "Sobre", icon: <InfoIcon /> }, { text: "Testimonials", icon: <CommentRoundedIcon /> }, { text: "Contact", icon: <PhoneRoundedIcon /> }, { text: "Cart", icon: <ShoppingCartRoundedIcon /> }].map((item) => (
               <ListItem key={item.text} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>{item.icon}</ListItemIcon>
