@@ -39,6 +39,7 @@ const Navbar = () => {
         <Link to="/"> <img src={Logo} alt="Logo" className="fsh" /> </Link>
       </div>
       <div className="navbar-links-container">
+      <Link to="/">Inicio</Link>
         <Link to="/sobre">Sobre</Link>
         <a href="">Cursos</a>
         <a href="">Formas de Ingresso</a>
