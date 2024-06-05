@@ -85,7 +85,7 @@ const Navbar = () => {
           <a href="#">Documentos/Editais</a>
           {openDropdown.documentos && (
             <div className="dropdown-content">
-              {['/Documentos/00-FSH-Regulamento Colegiado de Curso.pdf', '/Documentos/000-Regulamento da CPA.pdf', '/Documentos/00-Regulamento NDE.pdf', '/Documentos/01-FSH-Regimento Geral.pdf', '/Documentos/02-FSH-PDI-2024-2028.pdf', '/Documentos/Apresentação CPA 2023_2s.pdf'].map((doc, index) => (
+              {['/Documentos/00-FSH-Regulamento Colegiado de Curso.pdf', '/Documentos/01-FSH-Regimento Geral.pdf', '/Documentos/02-FSH-PDI-2024-2028.pdf', '/Documentos/Apresentação CPA 2023_2s.pdf', '/Documentos/Regulamento Colegiado de Curso.pdf', '/Documentos/Regulamento Colegiado de Curso.pdf.pdf'].map((doc, index) => (
                 <a key={index} href="#" onClick={() => window.open(doc)}>
                   {doc.split('/').pop().replace('.pdf', '').replace(/[-_]/g, ' ')}
                 </a>
