@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel, CarouselItem } from 'react-bootstrap';
 import BannerBackground from "../Assets/Logo.png";
-import BannerImage from "../Assets/WhatsApp Image 2024-06-04 at 21.30.01.jpeg";
+import BannerBackground from "../Assets/carroussel1.jpg";
 import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
 import 'bootstrap/dist/css/bootstrap.min.css';
