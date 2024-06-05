@@ -32,7 +32,7 @@ function Tec() {
     <div className="App">
       <Navbar />
       <section className="cursos-container">
-        <h2 className="titulo-cursos">Nossos cursos tecnólogos</h2>
+        <h2 className="titulo-cursos">Nossos cursos Tecnólogos</h2>
         <div className="lista-cursos">
           {cursos.map((curso) => (
             <Curso key={curso.titulo} {...curso} /> 
