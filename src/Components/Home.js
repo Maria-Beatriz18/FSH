@@ -1,7 +1,7 @@
 import React from "react";
 import { Carousel, CarouselItem } from 'react-bootstrap';
 import BannerBackground from "../Assets/Logo.png";
-import BannerImage from "../Assets/carroussel1.jpg";
+import BannerImage from "../Assets/WhatsApp Image 2024-06-04 at 21.30.01.jpeg";
 import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,7 +38,7 @@ const Home = () => {
         <div className="home-image-section">
 <Carousel fade>
             <CarouselItem interval={2000} className="carousel-item active">
-              <img src={BannerImage} className="d-block w-100" alt="Banner Image" />
+              <img src={BannerImage}  className="d-block w-100" alt="Banner Image" />
             </CarouselItem>
           
             <CarouselItem interval={2000} className="carousel-item">
