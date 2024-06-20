@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../Assets/vestibular.jpg";
 import enem from "../Assets/enem.jpg";
 import pd from "../Assets/pd.jpg";
-import trans from "../Assets/VERTICAL COMPLETA FUNDO AZUL .png";
+import trans from "../Assets/vertical_completa_fundo_azul.png";
 
 
 

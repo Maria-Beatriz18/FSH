@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYMENT_ENV=production
+    - /usr/local/bin/npm install
+    - /usr/local/bin/npm run build
+    - rsync -a build/ /home/user/public_html/
