@@ -1,7 +1,69 @@
 ---
+---
 deployment:
+  environment:
+    NODE_ENV: production
+
   tasks:
-    - export DEPLOYMENT_ENV=production
-    - /usr/local/bin/npm install
-    - /usr/local/bin/npm run build
-    - rsync -a build/ /home/user/public_html/
+    - ## Definir variável de ambiente NODE_ENV
+      export NODE_ENV=production
+
+    - ## Instalar dependências do Node.js
+      /usr/local/bin/npm install
+
+    - ## Compilar código React
+      /usr/local/bin/npm run build
+
+    - ## Instalar servidor web Nginx
+      apt-get install nginx
+
+    - ## Configurar servidor web Nginx
+      echo "server {
+        listen 80;
+        server_name fsh.edu.br;
+        root /home/fsh/public_html;  # Substitua por /home/user se necessário
+        index index.html;
+
+        location / {
+          try_files $uri $uri/ /index.html;
+        ---
+deployment:
+  environment:
+    NODE_ENV: production
+
+  tasks:
+    - ## Definir variável de ambiente NODE_ENV
+      export NODE_ENV=production
+
+    - ## Instalar dependências do Node.js
+      /usr/local/bin/npm install
+
+    - ## Compilar código React
+      /usr/local/bin/npm run build
+
+    - ## Instalar servidor web Nginx
+      apt-get install nginx
+
+    - ## Configurar servidor web Nginx
+      echo "server {
+        listen 80;
+        server_name fsh.edu.br;
+        root /home/fsh/public_html;  # Substitua por /home/user se necessário
+        index index.html;
+
+        location / {
+          try_files $uri $uri/ /index.html;
+        }
+      }" > /etc/nginx/sites-available/fsh.edu.br
+      ln -s /etc/nginx/sites-available/fsh.edu.br /etc/nginx/sites-enabled/fsh.edu.br
+      service nginx restart
+
+    - ## Copiar pasta de compilação para o ServHosto
+      rsync -a build/ /home/fsh/public_html/  # Substitua por /home/user se necessário
+
+      }" > /etc/nginx/sites-available/fsh.edu.br
+      ln -s /etc/nginx/sites-available/fsh.edu.br /etc/nginx/sites-enabled/fsh.edu.br
+      service nginx restart
+
+    - ## Copiar pasta de compilação para o ServHosto
+      rsync -a build/ /home/fsh/public_html/  # Substitua por /home/user se necessário
